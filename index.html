@@ -1,1 +1,22 @@
 <h1>Hello!</h1>
+<div id="navbar">
+    <a href="#top">Assignment Intro</a>
+    <a href="#1">Part 1</a>
+    <a href="#2">Part 2</a>
+    <a href="#3">Part 3</a>
+  </div>
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+<br>   
