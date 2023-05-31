@@ -1,11 +1,123 @@
 @import url("https://use.typekit.net/yxk3ens.css");
 
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #f3ebec;
 }
+
+li,
+a {
+  font-family: "source-code-pro", monospace;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 16px;
+  color: #24252A;
+  text-decoration: none;
+}
+
+ul li a.active-page {
+  color: #ff4f8c;
+}
+
+h1 {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 60px;
+  color: #24252A;
+  text-align: center;
+  padding: 1.5% 5%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background: linear-gradient(-45deg, #bcf4de, #cde5d7, #ded6d1, #eec6ca, #ffb7c3);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+nav input[type="checkbox"] {
+  display: none;
+}
+
+nav label {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .logo-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .nav_links {
+    display: none;
+    list-style: none;
+    padding-top: 10px;
+  }
+
+  .nav_links li {
+    padding: 5px 0;
+  }
+
+  .nav_links li a {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ .nav_links {
+    display: block;
+  }
+
+  #menu-toggle:checked + label {
+    display: block;
+  }
+  
+  #menu-toggle + label:before {
+    content: "\2630";
+  }
+}
+
+
+
+/*
+@import url("https://use.typekit.net/yxk3ens.css");
 
 li, a {
     font-family: "source-code-pro", monospace;
@@ -24,7 +136,7 @@ li, a {
 h1 {
   font-family: "futura-pt-bold", sans-serif;
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
   font-size: 60px;
   color: #24252A;
   text-align: center;
@@ -90,3 +202,4 @@ footer {
 .nav_links li a:hover {
   color: #fa7da7;
 }
+*/
